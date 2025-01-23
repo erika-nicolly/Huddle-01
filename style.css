@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-primary-violet: hsl(257, 40%, 49%);
+    --color-primary-magenta: hsl(300, 69%, 71%);
+    --color-white: #ffffff;
+}
+
+body {
+   background-color: var(--color-primary-violet);
+}
+
+.background {
+    background-image: url(asseats/bg-mobile.svg);
+    background-color: var(--color-primary-violet);
+    height: 44rem;
+}
+
+.header {
+    width: 18rem;
+    margin: 3rem 2rem 5rem;
+}
+
+.image {
+    margin: 0 auto 5.6rem;
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image:hover {
+    animation: move 2s backwards 0.4s ease
+}
+
+main {
+    padding: 0 3rem 0;
+}
+
+h1 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-size: 3.2rem;
+    text-align: center;
+    color: var(--color-white);
+
+    margin-top: 3rem;
+    margin-bottom: 2.4rem;
+}
+
+p {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 175%;
+    text-align: center;
+    color: var(--color-white);
+
+    margin-bottom: 3rem;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 6rem;
+    padding: 1.2rem;
+    width: 22rem;
+    border: 0;
+    border-radius: 10rem;
+    cursor: pointer;
+
+    background-color: #ffffff;
+    color: var(--color-primary-violet);
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: hsl(280, 44%, 88%);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: .8rem;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+@keyframes move {
+    60% {
+      transform: scale(1.1);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+    }
+    
+    .background {
+        background-image: url(asseats/bg-desktop.svg);
+        height: 100vh;
+    }
+
+    .image {
+        margin: 4rem 2rem 2rem 4rem;
+        width: 55rem;
+    }
+
+    .image:hover {
+        animation: move 2s backwards 0.4s ease
+    }
+
+    main {
+        background-color: var(--color-primary-violet);
+
+        height: 100vh;
+    }
+
+    .text {
+        margin: 22rem 1rem 20rem;
+    }
+
+    .text h1, p {
+        text-align: start;
+    }
+
+    button {
+        display: flex;
+        align-items: start;
+        justify-items: first baseline;
+    }
+
+    .icons {
+        background-color: var(--color-primary-violet);
+
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        gap: .8rem;
+    }
+}
