@@ -1,12 +1,11 @@
-# Projeto 01 - frontend mentor (huddle)
-
-Breve descrição sobre o que o projeto faz e sua finalidade.
+# Huddle-Frontend Mentor
 
 Versão desktop
 ![Captura de Tela do Projeto](./.github/preview.desktop.png)
 
-Versão mobile
+Versão mobile 
 ![Captura de Tela do Projeto](./.github/preview.mobile.png)
+
 
 ## 🚀 Tecnologias
 

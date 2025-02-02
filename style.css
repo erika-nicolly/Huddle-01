@@ -22,17 +22,17 @@ body {
 .background {
     background-image: url(asseats/bg-mobile.svg);
     background-color: var(--color-primary-violet);
-    height: 44rem;
+    height: 41rem;
 }
 
 .header {
-    width: 18rem;
+    width: 14.5rem;
     margin: 3rem 2rem 5rem;
 }
 
 .image {
     margin: 0 auto 5.6rem;
-    width: 40rem;
+    width: 34rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,24 +43,24 @@ body {
 }
 
 main {
-    padding: 0 3rem 0;
+    padding: 0 2rem 0;
 }
 
 h1 {
     font-family: "Poppins", serif;
     font-weight: 600;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     text-align: center;
     color: var(--color-white);
 
-    margin-top: 3rem;
+    margin-top: 3.2rem;
     margin-bottom: 2.4rem;
 }
 
 p {
     font-family: "Poppins", serif;
     font-weight: 300;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 175%;
     text-align: center;
     color: var(--color-white);
@@ -83,13 +83,14 @@ button {
     color: var(--color-primary-violet);
     font-family: "Open Sans", serif;
     font-weight: 400;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
     background-color: hsl(280, 44%, 88%);
 }
 
-.icons {
+#icons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,7 +113,7 @@ button:hover {
 @media (min-width: 1024px) {
     body {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 60% 40%;
         overflow: hidden;
     }
     
@@ -122,8 +123,8 @@ button:hover {
     }
 
     .image {
-        margin: 4rem 2rem 2rem 4rem;
-        width: 55rem;
+        margin: 4rem auto 2rem;
+        width: 52rem;
     }
 
     .image:hover {
@@ -137,7 +138,7 @@ button:hover {
     }
 
     .text {
-        margin: 22rem 1rem 20rem;
+        margin: 18rem 1rem 14rem;
     }
 
     .text h1, p {
@@ -148,9 +149,11 @@ button:hover {
         display: flex;
         align-items: start;
         justify-items: first baseline;
+
+        margin-bottom: 0;
     }
 
-    .icons {
+    #icons {
         background-color: var(--color-primary-violet);
 
         display: flex;
@@ -158,5 +161,50 @@ button:hover {
         justify-content: end;
         width: 100%;
         gap: .8rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .header {
+        width: 16rem;
+    }
+
+    .image {
+        margin-inline: auto;
+        width: 55rem;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 20rem;
+        margin-right: 2rem
+    }
+
+    h1, p {
+        text-align: left;
+    }
+
+    h1 {
+        margin: auto 11rem 3rem 0;
+        font-size: 3.5rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    button {
+        width: 26rem;
+        padding: 14px;
+        margin-bottom: 0;
     }
 }
