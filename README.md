@@ -19,7 +19,7 @@ Projeto exclusivo e gratuito, promovido pela Frontend Mentor para ensino de tecn
 <br>
 
 ## 🌐 Acesse o projeto
-👉 [Huddle](https://erika-nicolly.github.io/DevLinks/#)
+👉 [Huddle](https://erika-nicolly.github.io/Huddle-01/)
 
 <br>
 
