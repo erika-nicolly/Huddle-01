@@ -37,7 +37,7 @@ body {
 }
 
 .img:hover {
-    animation: move 2s ease
+    animation: move 2s 0.4s ease
 }
 
 #text {
