@@ -2,93 +2,83 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
 }
 
 :root {
     font-size: 62.5%;
-
-    --color-primary-violet: hsl(257, 40%, 49%);
-    --color-primary-magenta: hsl(300, 69%, 71%);
 }
 
 body {
-   background-color: var(--color-primary-violet);
+    background-color: hsl(257, 40%, 49%);
 }
 
 #background {
-    background: url(assets/bg-mobile.svg) no-repeat center/cover;
-    height: 370px;
-    padding: 3rem;
+    background: url(./assets/bg-mobile.svg) no-repeat;
+    background-size: cover;
+    height: 37.5rem;
 }
 
 .logo {
-    width: 14rem;
-    margin-bottom: 4rem;
+    width: 12rem;
+    height: auto;
+    margin: 3rem 1.5rem 4rem;
 }
 
 .img {
-    margin: 0 auto 5.6rem;
-    width: 32rem;
-    display: flex;
-    align-items: center;
+    width: 280px;
+    display: block;
+    margin: 2rem auto;
 }
 
 .img:hover {
-    animation: move 2s 0.4s ease
+    animation: move 2.3s 0.4s ease
 }
 
-#text {
-    padding: 0 3.2rem;
+#container {
+    margin: 0 3.5rem;
     font-family: "Poppins", serif;
     text-align: center;
 }
 
 h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.4rem;
-    margin-top: 3.2rem;
-    margin-bottom: 1.6rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
     color: #ffffff;
 }
 
 p {
     font-weight: 400;
     font-size: 1.5rem;
-    line-height: 160%;
-    margin-bottom: 3rem;
+    line-height: 150%;
+    margin-bottom: 2.2rem;
     color: #D9D9D9;
 }
 
 button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 5rem;
-    padding: 1.1rem;
+    margin: 0 auto 6rem;
+    padding: 1rem;
     width: 20rem;
     border: 0;
     border-radius: 100px;
     cursor: pointer;
 
     background-color: #ffffff;
-    color: var(--color-primary-violet);
+    color: hsl(257, 40%, 49%);
     font-family: "Open Sans", serif;
-    font-weight: 400;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: var(--color-primary-magenta);
+    background-color: hsl(300, 69%, 71%);
 }
 
 #icons {
     display: flex;
     justify-content: center;
     gap: .8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
     color: #ffffff;
 }
 
@@ -96,10 +86,10 @@ button:hover {
     display: inline-flex; /* Para centralizar o ícone dentro da borda */
     align-items: center;
     justify-content: center;
-    width: 16px; /* Tamanho do círculo */
-    height: 16px;
+    width: 12px; /* Tamanho do círculo */
+    height: 12px;
     padding: 1.5rem;
-    border: 2px solid #ffffff; /* Cor e espessura da borda */
+    border: 1px solid #ffffff; /* Cor e espessura da borda */
     border-radius: 50%; /* Deixa a borda circular */
     font-size: 16px; /* Ajusta o tamanho do ícone */
 
@@ -107,8 +97,8 @@ button:hover {
 
 .icon-borda:hover {
     cursor: pointer;
-    color: var(--color-primary-magenta);
-    border: 2px solid var(--color-primary-magenta);
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
 }
 
 @keyframes move {
@@ -117,44 +107,103 @@ button:hover {
     }
 }
 
-@media (min-width: 1024px) {
-    body {
-        background: url(assets/bg-desktop.svg) no-repeat center/cover;
-        background-color: var(--color-primary-violet);
-        display: flex;
-        overflow: hidden;
+@media (min-width:500px) {
+    .logo {
+       margin: 2.5rem; 
     }
 
     .img {
-        margin: 4rem 2rem 0;
-        width: 500px;
+        width: 320px;
+    }
+}
+
+@media (min-width: 768px) {
+    #background {
+        background-position: center;
+        background-size: cover;
     }
 
-    main {
-        height: 100vh;
+    .logo {
+        width: 14rem;
+        margin: 2.5rem;
+    }
+
+    .img {
+        width: 340px;
+    }
+
+   h1 {
+    font-size: 28px;
+   }
+
+   p {
+    font-size: 16px;
+    margin: 0 5rem 3rem;
+   }
+
+   button {
+    width: 22rem;
+    padding: 1.3rem;
+   }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background: url(assets/bg-desktop.svg) no-repeat;
+        background-color: hsl(257, 40%, 49%);
+        background-size: cover;
+        background-position: center;
+        
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
+
+        min-height: 100vh;
     }
 
-    #text {
-        padding: 0 3.4rem;
+    #background {
+        flex: 2;
+    }
+
+    .logo {
+        width: 16rem;
+        margin: 3rem;
+        position: absolute;
+        top: 1rem;
+    }
+
+    .img {
+        width: 520px;
+        margin: 0 auto;
+        padding-left: 1.5rem;
+    }
+
+    #container {
+        flex: 1;
+        margin: 0 3.2rem;
+        max-width: 670px;
+        display: flex;
+        align-items: initial;
+        flex-direction: column;
     }
 
     h1 {
-        text-align: start;
+        text-align: initial;
         font-size: 26px;
-        margin: 1rem auto;
     }
 
     p {
         font-size: 16px;
         text-align: start;
-        margin-bottom: 1.6rem;
+        margin: 0 0 2rem;
     }
 
     button {
         margin: 0;
+        font-size: 14px;
+        font-weight: 600;
     }
 
     #icons {
@@ -164,31 +213,36 @@ button:hover {
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 10px;
+        padding: 1.3rem;
     }  
+
+    .icon-borda {
+        width: 30px; 
+        height: 30px;
+        padding: 1.8rem;
+
+        font-size: 18px; /* Ajusta o tamanho do ícone */
+    }
 }
 
 @media (min-width: 1440px) {
-    body {
-        display: flex;
-    }
 
     .logo {
-        width: 190px;
-        margin: 2rem;
+        position: fixed;
+        top: 1;
+        width: 17rem;
     }
 
     .img {
-        width: 700px;
+        width: 680px;
     }
 
-    #text {
-        padding: 7.4rem;
+    #container {
+        padding: 7.2rem;
     }
 
     h1 {
         font-size: 3.6rem;
-        margin: 0 4rem 2rem 0;
     }
 
     p {
@@ -203,7 +257,7 @@ button:hover {
 
     #icons {
         padding-right: 6.4rem;
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
         display: flex;
         gap: 1rem;
     }
